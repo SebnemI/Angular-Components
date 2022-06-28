@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-primary">Contact App</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint temporibus libero et atque explicabo asperiores totam nulla possimus ut voluptates ad corrupti non, sunt, laboriosam ratione mollitia harum ducimus assumenda?</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <app-contact-list (sendContact)="selectedContact=$event"></app-contact-list>
+        </div>
+        <div class="col-md-3">
+            <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
+        </div>
+    </div>
+</div>

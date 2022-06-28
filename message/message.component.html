@@ -1,0 +1,19 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <p class="h4">Message</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="h4">{{message}}</p>
+                        <button (click)="updateMessage('Good Morning')" class="btn btn-secondary btn-sm">Good Morning</button>
+                        <button (click)="updateMessage('Good Afternoon')" class="btn btn-secondary btn-sm">Good Afternoon</button>
+                        <button (click)="updateMessage('Good Evening')" class="btn btn-secondary btn-sm">Good Evening</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

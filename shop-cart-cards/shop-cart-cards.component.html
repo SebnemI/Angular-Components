@@ -1,0 +1,19 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-primary">Shopping Cart</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur error, omnis soluta atque autem unde, quam minus natus ullam fugit, recusandae eos laudantium ad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let product of products">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</section>

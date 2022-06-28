@@ -1,0 +1,48 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-primary">Shopping Cart</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur error, omnis soluta atque autem unde, quam minus natus ullam fugit, recusandae eos laudantium ad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-3">
+    <div class="container">
+        <table class="table table-hover text-center table-striped">
+            <thead class="bg-secondary text-white">
+                <tr>
+                    <th>Sno</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product.sno}}</td>
+                    <td>
+                        <img [src]="product.image" alt="" width="50" height="50">
+
+                    </td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price | currency : 'NOK'}}</td>
+                    <td>
+                        <i (click)="decrQty(product.sno)" class="fa fa-minus-square"></i>
+                        {{product.qty}}
+                        <i (click)="incrQty(product.sno)" class="fa fa-plus-square"></i>
+                    </td>
+                    <td>{{product.qty*product.price  | currency : 'NOK'}}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td>Grand Total</td>
+                    <td>{{calcGrandTotal()  | currency : 'NOK'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-primary">Product Items</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur error, omnis soluta atque autem unde, quam minus natus ullam fugit, recusandae eos laudantium ad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-3">
+    <div class="container">
+        <table class="table table-hover text-center table-striped">
+            <thead class="bg-secondary text-white">
+                <tr>
+                    <th>Sno</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{product.sno}}</td>
+                    <td>
+                        <img [src]="product.image" alt="" width="50" height="50">
+                    </td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>
+                        <i (click)="decrementQty()" class="fa fa-minus-square"></i>
+                        {{product.qty}}
+                        <i (click)="incrementQty()" class="fa fa-plus-square"></i>    
+                    </td>
+                    <td>{{product.price*product.qty}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

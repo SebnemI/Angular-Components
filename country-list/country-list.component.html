@@ -1,0 +1,39 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-primary">Country List</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, error consequuntur. Nobis necessitatibus eaque quod sit, possimus dignissimos aperiam maxime id quia quis quas incidunt consequatur aliquid iure blanditiis velit odio iusto reiciendis tempora ullam dolor at alias repudiandae mollitia! Dolorem odit impedit sunt iste illo suscipit natus ex facilis?</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover table-striped text-center">
+                <thead class="bg-secondary text-white">
+                    <tr>
+                        <th>Name</th>
+                        <th>Flag</th>
+                        <th>Region</th>
+                        <th>Capital</th>
+                        <th>Population</th>
+                        <th>Time Zone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let country of countries" >
+                        <td>
+                            <a routerLink="/countries/{{country.name.common}}" class="text-primary">{{country.name.common}}</a>
+                        </td>
+                        <td><img [src]="country.flags.png" alt="" weight="50px" height="50px"></td>
+                        <td>{{country.region}} </td>
+                        <td>{{country.capital}} </td>
+                        <td>{{country.population}} </td>
+                        <td>{{country.timezones}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
